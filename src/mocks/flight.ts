@@ -6,7 +6,7 @@ export const flightData = [
     depart: '25/02/2020 - 18:00h',
     return: '25/02/2020 - 21:00h ',
     adults: 1,
-    value: 200,
+    price: 200,
   },
   {
     type: 'VOO DIRETO',
@@ -15,7 +15,7 @@ export const flightData = [
     depart: '25/02/2020 - 23:30h',
     return: '25/02/2020 - 03:00h',
     adults: 1,
-    value: 340,
+    price: 340,
   },
   {
     type: 'VOO DIRETO',
@@ -24,7 +24,7 @@ export const flightData = [
     depart: '25/02/2020 - 15:00h',
     return: '25/02/2020 - 16:00h',
     adults: 1,
-    value: 100,
+    price: 100,
   },
   {
     type: 'VOO DIRETO',
@@ -33,6 +33,6 @@ export const flightData = [
     depart: '25/02/2020 - 15:00h',
     return: '25/02/2020 - 16:00h',
     adults: 1,
-    value: 100,
+    price: 100,
   },
 ];

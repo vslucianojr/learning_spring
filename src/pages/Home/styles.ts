@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import flightover from '../../assets/flight-over.png';
 
 export const Screen = styled.div`
   display: flex;
@@ -29,4 +30,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-image: url(${flightover});
+  background-size: cover;
+  background-repeat: no-repeat;
 `;

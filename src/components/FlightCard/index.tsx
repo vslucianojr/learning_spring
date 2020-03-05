@@ -9,7 +9,7 @@ interface FlightCardProps {
   depart: string;
   return: string;
   adults: number;
-  value: number;
+  price: number;
 }
 
 const FlightCard: React.FC<FlightCardProps> = (props: FlightCardProps) => (
@@ -33,7 +33,7 @@ const FlightCard: React.FC<FlightCardProps> = (props: FlightCardProps) => (
     </Section>
     <Section>
       <Label>Preço por Adulto:</Label>
-      <Text>R${props.value}</Text>
+      <Text>R${props.price}</Text>
     </Section>
     <Button style={{ width: '100%', marginTop: 30 }} type="primary">
       Selecionar
@@ -47,7 +47,7 @@ FlightCard.defaultProps = {
   depart: '10/10/2020',
   return: '20/20/2020',
   adults: 1,
-  value: 0,
+  price: 0,
 };
 
 export default FlightCard;
