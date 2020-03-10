@@ -37,5 +37,4 @@ const FlightForms: React.FC<any> = (props: any) => (
     </Button>
   </>
 );
-
 export default FlightForms;

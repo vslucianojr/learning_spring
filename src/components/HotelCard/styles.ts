@@ -63,14 +63,15 @@ export const DescriptionSection = styled.div`
 `;
 
 export const TypeHotel = styled.span`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #1976d2;
 `;
 
 export const HotelText = styled.span`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  color: #1976d2;
 `;
 
 export const HotelLabel = styled.span`
@@ -84,4 +85,10 @@ export const HotelDescripion = styled.span`
   font-size: 12px;
   font-weight: bold;
   text-align: justify;
+`;
+
+export const Spacer = styled.div`
+  background-color: gray;
+  width: 2px;
+  height: 20px;
 `;
