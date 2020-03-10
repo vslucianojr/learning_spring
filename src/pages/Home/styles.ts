@@ -3,7 +3,6 @@ import flightover from '../../assets/flight-over.png';
 
 export const Screen = styled.div`
   display: flex;
-  width: 100%;
   height: 100%;
   flex-direction: row;
 `;
@@ -11,10 +10,10 @@ export const Screen = styled.div`
 export const ScreenContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 200px;
   align-items: center;
   flex-direction: column;
-  min-height: 1000px;
+  min-height: 100%;
   min-width: 430px;
   width: 30%;
   background-color: #ebebeb;
@@ -30,7 +29,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-image: url(${flightover});
+  background: rgba(26, 31, 41, 0.4) url(${flightover}) no-repeat;
+  background-blend-mode: darken;
   background-size: cover;
-  background-repeat: no-repeat;
 `;

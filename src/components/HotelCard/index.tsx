@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel, Button, Rate } from 'antd';
+import { Button, Rate } from 'antd';
+import { Carousel } from 'react-bootstrap';
 import {
   StyledCardHotel,
   ImageSection,
@@ -11,9 +12,11 @@ import {
   HotelLabel,
   InfoSection,
   Section,
+  Spacer,
 } from './styles';
 import flatRoom from '../../assets/flat_room.png';
-
+import hotel from '../../assets/hotel.jpg';
+import pool from '../../assets/pool.jpg';
 interface HotelCardProps {
   type: string;
   stars: number;
@@ -22,19 +25,28 @@ interface HotelCardProps {
   description: string;
 }
 
-function onChange() {
-  console.log();
-}
-
 const HotelCard: React.FC<HotelCardProps> = (props: HotelCardProps) => (
   <StyledCardHotel>
-    <ImageSection></ImageSection>
+    <ImageSection>
+      <Carousel>
+        <Carousel.Item>
+          <img src={flatRoom} alt="First slide" height="300px" width="250px" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={hotel} alt="Second slide" height="300px" width="250px" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={pool} alt="Third slide" height="300px" width="250px" />
+        </Carousel.Item>
+      </Carousel>
+    </ImageSection>
     <HotelInfo>
       <Section>
         <HotelText>{props.name}</HotelText>
       </Section>
       <InfoSection>
         <TypeHotel>{props.type}</TypeHotel>
+        <Spacer />
         <Rate allowHalf disabled defaultValue={props.stars} />
       </InfoSection>
       <DescriptionSection>

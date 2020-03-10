@@ -2,7 +2,7 @@ export const hotelData = [
   {
     type: 'Pousada',
     stars: 2.5,
-    name: 'Descanço BomBom',
+    name: 'BomBom',
     price: 2000,
     description:
       'A nível organizacional, a hegemonia do ambiente político agrega valor ao estabelecimento dos procedimentos normalmente adotados.',
