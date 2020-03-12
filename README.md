@@ -26,20 +26,22 @@
 2. Entre na pasta learning_spring `$ cd learning_spring`
 3. Rode o comando para instalar as dependências;
 
-```shell
+```
    $ yarn install
 ```
 
 4. Utilize o yarn para executar o Front-End da aplicação;
 
-```shell
+```
     $ yarn start
 ```
 
 5. Com o docker instalado rode o comando abaixo para criar os containers do banco de dados `postgres` e da interface de gerenciamento `pgadmin`, </br> se já existir, apenas mude no arquivo `docker-compose.yml` os environments para os desejados.
 
-```shell
+```
   $ docker-compose up -d
 ```
 
 7. Proximos passos...
+
+![Alt text](images/database_schema.jpg?raw=true 'Title')

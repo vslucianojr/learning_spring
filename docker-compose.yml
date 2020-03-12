@@ -15,7 +15,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=PostgreSQL2018
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=synchroHotel
+      - POSTGRES_DB=synchro-hotel
   pgadmin:
     image: dpage/pgadmin4:latest
 
