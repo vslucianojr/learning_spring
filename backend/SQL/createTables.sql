@@ -1,47 +1,51 @@
-CREATE TABLE business(
+CREATE TABLE business
+(
     id serial not null primary key,
-    businessName varchar (255) not null
-)
-
-CREATE TABLE hotels(
-	idHotel serial not null primary key,
-	nameHotel varchar(255) not null,
-	typeHotel varchar(255) not null,
-	starsHotel float not null,
-	descriptionHotel varchar (255) not null,
-	addressHotel varchar (255) not null,
-	breakfastHotel boolean not null,
-	businessOwner integer references bussines(id) on delete cascade
+    name varchar (255) not null
 );
 
-CREATE TABLE rooms(
-    idRoom serial not null primary key,
-    floorRoom integer not null,
-    bedsNumber integer not null,
+CREATE TABLE hotels
+(
+    id serial not null primary key,
+    name varchar(255) not null,
+    type varchar(255) not null,
+    stars float not null,
+    description varchar (255) not null,
+    address varchar (255) not null,
+    breakfast boolean not null,
+    "idBusiness" integer references business(id) on delete cascade
+);
+
+CREATE TABLE rooms
+(
+    id serial not null primary key,
+    beds integer not null,
     persons integer not null,
     price float not null,
     reserved boolean,
-    hotelsOwner integer references hotels(idHotel) on delete cascade
+    "idHotel" integer references hotels(id) on delete cascade
 );
 
-CREATE TABLE reservation(
-    idReservation serial not null primary key,
-    customerName varchar not null,
-    checkInRes DATE not null,
-    checkOutRes DATE not null,
-    roomsRes integer references rooms(idRoom) on delete cascade
+CREATE TABLE reservation
+(
+    id serial not null primary key,
+    customer varchar not null,
+    checkin DATE not null,
+    checkout DATE not null,
+    "idRooms" integer references rooms(id) on delete cascade
 );
 
-CREATE TABLE tickets(
-    idTicket serial not null primary key,
-    fromCity varchar not null,
-    toCity varchar not null,
-    departDate date not null,
-    returnDate date not null,
-    priceTicket float not null,
-    typeTicket varchar not null,
-    customerName varchar,
-    busyTicket boolean,
-    businessOwner integer references business(id) on delete cascade
+CREATE TABLE tickets
+(
+    id serial not null primary key,
+    fromcity varchar not null,
+    tocity varchar not null,
+    departdate date not null,
+    returndate date not null,
+    price float not null,
+    type varchar not null,
+    customer varchar,
+    busy boolean,
+    "idBusiness" integer references business(id) on delete cascade
 );
 
