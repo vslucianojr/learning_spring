@@ -1,11 +1,11 @@
 package com.example.backend;
 
-public class Greeting {
+public class Tickets {
 
 	private final long id;
 	private final String content;
 
-	public Greeting(long id, String content) {
+	public Tickets(long id, String content) {
 		this.id = id;
 		this.content = content;
 	}
